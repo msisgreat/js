@@ -1,0 +1,28 @@
+<script type='text/javascript'>
+var context = new SP.ClientContext.get_current();
+web = context.get_web();
+list = web.get_lists().getByTitle('Documents');
+var webPartView = list.getView('{41770fbe-48c8-4541-9629-cf6119f81c02}');
+context.load(list);
+context.load(webPartView);
+context.executeQueryAsync(Function.createDelegate(this, addWebPartSuccess), Function.createDelegate(this, addWebPartFail));
+function addWebPartSuccess(sender, args) {
+if (webPartView) {
+ alert('webpartview valid');
+ webPartView.set_scope(2); // recursiveall
+ webPartView.set_viewQuery('<Where><Contains><FieldRef Name="FileDirRef"/><Value Type="Text">MyFolder</Value></Contains></Where>');
+ webPartView.update();
+ context.load(webPartView);
+ context.executeQueryAsync(Function.createDelegate(this, updateSuccess), Function.createDelegate(this, updateFailed));
+//alert('call finished');
+ }
+else {
+ alert('Unable to get view');
+ }
+}
+function addWebPartFail(sender, args) {
+ alert('web part failed');
+}
+function updateSuccess(sender, args) { alert('changed the view'); }
+function updateFailed(sender, args) { alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace()); }
+</script>
