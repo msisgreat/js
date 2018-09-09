@@ -1,0 +1,28 @@
+<script src="/_layouts/15/sp.taxonomy.js" type="text/javascript"></script>
+<script src="/ms/SiteAssets/scripts/termsetScript.js" type="text/javascript"></script>
+
+<div id="Navigation">
+
+</div>
+
+<style>.techClass {
+    background-color: var(--msblue);
+    width: 120px;
+}
+
+.softClass {
+    background-color: var(--msyellow);
+    width: 120px;
+}
+
+.crmClass {
+    background-color: var(--msred);
+    width: 120px;
+}
+
+.spClass {
+    background-color: var(--msgrey);
+    width: 120px;
+}
+
+</style>
