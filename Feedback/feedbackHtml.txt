@@ -1,0 +1,131 @@
+<script src="/_layouts/15/sp.runtime.js" type="text/javascript"></script>
+<script src="/_layouts/15/sp.js" type="text/javascript"></script>
+<script src="/ms/SiteAssets/scripts/feedbackMaster.js" type="text/javascript"></script>
+
+<div class="col-md-6" id="showMasterFeedback">
+	<div class="row footer-social-text">Submit feedback about this site</div>
+	<div class="row">
+		<a class="tooltipFeedback" data-tooltip-content="#tooltip_content1"><i class="fas fa-grin-hearts fa-2x smile1" id="smile1"></i></a>
+		<a class="tooltipFeedback" data-tooltip-content="#tooltip_content2"><i class="fas fa-smile fa-2x smile2" id="smile2"></i></a>
+		<a class="tooltipFeedback" data-tooltip-content="#tooltip_content3"><i class="fas fa-frown fa-2x smile3" id="registerBtn"></i></a>
+	</div>
+</div>
+
+<div id="profileMasterDetails" style="display:none;" >
+	<div id="meDisplayName"></div>
+	<div id="meEmail"></div>
+	<div id="mePhone"></div>
+</div>
+<div class="tooltip_templates" style="display:none;">
+	<div id="tooltip_content1">
+		<div style="magin:6px;">
+			<div id="tank1" class="thankText">Thank you </div>
+			<div id="feedbackform1">
+				<div class="feedbackTxtTitle">Please tell us what can be improved in the site.</div>
+				<div class="regFormRow"><textarea id="txtFeedback1" placeholder="type suggestions here" class="myPlaceholder ctrlDesignTxt"
+					    col="30" row="8"></textarea></div>
+				<div class="linkText"><a id="submitMyFeedback1" class="btn btn-primary" href="#">Submit Feedback</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="tooltip_content2">
+		<div style="magin:6px;">
+			<div id="tank2" class="thankText">Thank you </div>
+			<div id="feedbackform2">
+				<div class="feedbackTxtTitle">Please tell us what can be improved in the site.</div>
+				<div class="regFormRow"><textarea id="txtFeedback2" placeholder="type suggestions here" class="myPlaceholder ctrlDesignTxt"
+					    col="30" row="8"></textarea></div>
+				<div class="linkText"><a id="submitMyFeedback2" class="btn btn-primary" href="#">Submit Feedback</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="tooltip_content3">
+		<div style="magin:6px;">
+			<div id="tank3" class="thankText">Thank you </div>
+			<div id="feedbackform3">
+				<div class="feedbackTxtTitle">Please tell us what can be improved in the site.</div>
+				<div class="regFormRow"><textarea id="txtFeedback3" placeholder="type suggestions here" class="myPlaceholder ctrlDesignTxt"
+					    col="30" row="8"></textarea></div>
+				<div class="regFormRow linkText"><a id="submitMyFeedback3" class="btn btn-primary" href="#">Submit Feedback</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+
+/* feedback styles */
+div.regFormRow {
+	margin-top: 6px;
+}
+
+textarea.myPlaceholder:-ms-input-placeholder {
+	font-style: italic;
+	color: rgb(1, 137, 130);
+	background-color: white;
+}
+
+.ctrlDesignTxt {
+	width: 320px;
+	height: 80px;
+}
+
+.ctrlDesign {
+	width: 300px;
+}
+
+.smile1 {
+	color: var(--msgreen);;
+	padding: 4px 6px 4px 0px;
+}
+
+.smile2 {
+	color: var(--msblue);;
+	padding: 4px 6px 4px 0px;
+}
+
+.smile3 {
+	color: var(--msred);;
+	padding: 4px 6px 4px 0px;
+}
+
+.smile1:hover {
+	animation: swing 0.9s;
+	cursor: pointer;
+}
+
+.smile2:hover {
+	animation: swing 0.9s;
+	cursor: pointer;
+}
+
+.smile3:hover {
+	animation: jello 0.9s;
+	cursor: pointer;
+}
+
+.thankText {
+	padding: 30px;
+	font-size: 24px;
+	color: gray;
+	display: none;
+}
+
+.feedbackTxtTitle {
+	font-size: 14px;
+	padding: 2px 4px 4px 2px;
+	color: white;
+}
+
+.tooltipster-content {
+	margin: 5px;
+	padding:5px;
+}
+
+.tooltipster-content .linkText {
+	margin-top: 8px;
+	text-align: right;
+	padding-right: 0px;
+}
+
+</style>
