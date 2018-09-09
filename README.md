@@ -1,5 +1,5 @@
 # js
-All the Javascript files and dependencies are here for the blog https://msisgreat.net 
+Javascript files repository for all the samples posted in my blog https://msisgreat.net   
 
 This JS folder is the parent of all the Javascripts used in my blog for each webpart / application. All the dependent files and libraries are in the dependency folder.
 The dependency folder has the below libraries
@@ -13,7 +13,7 @@ The dependency folder has the below libraries
 Dependency Files in SharePoint
 All my javascript application in this will use these dependency libraries. So i recommend to add the path in the master page to make it easier. But not all dependencies to be referenced in Master Page. Ex: Boot strap libraries no need to refer in master page. Because if you refer bootstrap css in master page the whole SharePoint site font and color will change and might have undesirable effect in your site. 
 
-If you want to add the reference in master page use below code snippet. In my below snippet i have created folder called "custommaster" under <site>/_catalogs/masterpage/. Under custommaster folder i uploaded all the dependency libraries. 
+If you want to add the reference in master page use below code snippet. In my below snippet i have created folder called "custommaster" under <site>/_catalogs/masterpage/. Under custommaster folder i uploaded all the dependency libraries. For more details please read my blog here https://msisgreat.net/2018/09/09/setup-prerequisite-msisgreat-masterpage-js-dependencies/ 
 
         <link rel="stylesheet" href="./custommaster/animate/animate.css" />
         <link rel="stylesheet" href="./custommaster/jq/jquery-ui-1.12.1/jquery-ui.css" />
