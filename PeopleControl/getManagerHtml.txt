@@ -1,0 +1,7 @@
+<script src="/_layouts/15/sp.js" type="text/javascript"></script>
+<script src="/_layouts/15/sp.UserProfiles.js" type="text/javascript"></script>
+<script src="/ms/SiteAssets/scripts/getManager.js" type="text/javascript"></script>
+
+<div style="float:right; display:none;margin-top:-3px;" id="manager1Div">
+    <input id="btnManager1" type="button" class="Manager1" value="Get Manager" />
+</div>
