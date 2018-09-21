@@ -1,0 +1,25 @@
+<script src="/ms/SiteAssets/scripts/vueSample.js"></script>
+
+<div id="appvue2">
+  <p>{{ message }}</p>
+  <hr />
+  <a class="btn btn-primary" v-on:click="getSliders">Get Items</a>
+  <div class="container">
+    <div class="table">
+      <div class="row">
+        <div class="col-md-3"><h3>Title</h3></div>
+        <div class="col-md-3"><h3>Introduction</h3></div>
+        <div class="col-md-3"><h3>Description</h3></div>
+        <div class="col-md-3"><h3>Picture</h3></div>
+      </div>
+      <hr/>
+      <div class="row" v-for="f in sliderContents">
+        <div class="col-md-3">{{f.Title}}</div>
+        <div class="col-md-3">{{f.Intro}}</div>
+        <div class="col-md-3">{{f.Description}}</div>
+        <div class="col-md-3"><img style="width:120px;" v-bind:src="f.SliderImage.Url" /></div>
+      </div>
+
+    </div>
+  </div>
+</div>
