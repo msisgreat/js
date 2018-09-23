@@ -1,0 +1,23 @@
+Search documents, pages, list items from anywhere with the 20 results, the below query will sort the results in descending order
+https://<site collection>/<site>/_api/search/query?querytext='*'&sortlist='LastModifiedTime:descending'&rowlimit=20
+
+Search all sites and everything and return only selected properties in the JSON. Note that the date return will be fixed format you need to convert it to local date time.
+https://<site collection>/<site>/_api/search/query?querytext='*'&sortlist='LastModifiedTime:descending'&rowlimit=20&selectproperties='Title,ModifiedOWSDATE,EditorOWSUSER,Path,ParentLink,FileExtension,FileName,ServerRedirectedEmbedURL' 
+
+Search everywhere any documents with the specific extensions only – doc, pdf, excel, powerpoint, txt and mpp files only
+https:// <site collection>/<site>/_api/search/query?querytext='*'&sortlist='LastModifiedTime:descending'&rowlimit=20&selectproperties='Title,ModifiedOWSDATE,EditorOWSUSER,Path,ParentLink,FileExtension,FileName,ServerRedirectedEmbedURL'&refiners='fileextension'&refinementfilters='(fileExtension:or("docx","pdf","doc","xls","xlsx","xlsm","ppt","pptx","mpp","csv","txt"))'
+
+Search documents only from me (My documents anywhere inside SharePoint) my email in below case is senthamilv@outlook.com, searches only by that user id
+https://<sitecollection>/<site>/_api/search/query?querytext='*'&sortlist='LastModifiedTime:descending'&rowlimit=20&selectproperties='Title,ModifiedOWSDATE,EditorOWSUSER,Path,ParentLink,FileExtension,FileName,ServerRedirectedEmbedURL'&refiners='EditorOWSUSER,fileextension'&refinementfilters='and(fileExtension:or("docx","pdf","doc","xls","xlsx","xlsm","ppt","pptx","mpp","csv","txt") , EditorOWSUSER:(Senthamilv@outlook.com) )’ 
+
+Search only my (specific user) documents from specific URL. In below query it searches only from https://<SITECOLLECTION>/sites/ms/
+https://<sitecollection>/sites/_api/search/query?querytext='*'&sortlist='LastModifiedTime:descending'&rowlimit=20&selectproperties='Title,ModifiedOWSDATE,EditorOWSUSER,Path,ParentLink,FileExtension,FileName,ServerRedirectedEmbedURL'&refiners='EditorOWSUSER,fileextension,Path'&refinementfilters='and(Path:"https://<SITECOLLECTION>/sites/ms/*",and(fileExtension:or("docx","pdf","doc","xls","xlsx","xlsm","ppt","pptx","mpp","csv","txt") , EditorOWSUSER:(Senthamilv@outlook.com) ))'
+
+Search all my documents from One Drive only 
+https://<sitecollection>/<site>/_api/search/query?querytext='*'&sortlist='LastModifiedTime:descending'&rowlimit=20&selectproperties='Title,ModifiedOWSDATE,EditorOWSUSER,Path,ParentLink,FileExtension,FileName,ServerRedirectedEmbedURL'&refiners='EditorOWSUSER,fileextension,Path'&refinementfilters='and(Path:”https://mysite.<DOMAIN>.com/personal*",and(fileExtension:or("docx","pdf","doc","xls","xlsx","xlsm","ppt","pptx","mpp","csv","txt") , EditorOWSUSER:(Senthamilv@outlook.com)))'
+
+Search all documents modified by (name *) 
+https://<sitecollection/<site>/_api/search/query?querytext='ModifiedBy:senthamil*'&sortlist='LastModifiedTime:descending'&rowlimit=20&selectproperties='Title,ModifiedOWSDATE,EditorOWSUSER,Path,ParentLink,FileExtension,FileName,ServerRedirectedEmbedURL'&refiners='fileextension'&refinementfilters='(fileExtension:or("docx","pdf","doc","xls","xlsx","xlsm","ppt","pptx","mpp","csv","txt"))'
+
+Search documents from your team members (peers and manager). For this search you can first find all your team members using my other blog here. Once the team member email addresses are known, those emails can be used as search refiners.
+https://<sitecollection>/<site>/_api/search/query?querytext='*'&sortlist='LastModifiedTime:descending'&rowlimit=20&selectproperties='Title,ModifiedOWSDATE,EditorOWSUSER,Path,ParentLink,FileExtension,FileName,ServerRedirectedEmbedURL'&refiners='EditorOWSUSER,fileextension'&refinementfilters='and(fileExtension:or("docx","pdf","doc","xls","xlsx","xlsm","ppt","pptx","mpp","csv","txt") , EditorOWSUSER:or (senthamilv@outlook.com,ananana@hotmail.com))'
