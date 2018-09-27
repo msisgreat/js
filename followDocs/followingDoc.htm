@@ -1,0 +1,25 @@
+<script src="/_layouts/15/sp.runtime.js" type="text/javascript"></script>
+<script src="/_layouts/15/sp.UserProfiles.js" type="text/javascript"></script>
+
+<script src="/ms/SiteAssets/dependency/jqToast/jquery.toastmessage.js"></script>
+<link href="/ms/SiteAssets/dependency/jPages/css/jPages.css" rel="stylesheet"></link>
+<script src="/ms/SiteAssets/dependency/jPages/js/jPages.js"></script>
+<link href="/ms/SiteAssets/dependency/jqToast/css/jquery.toastmessage.css" rel="stylesheet"></link>
+<link href="/ms/SiteAssets/htmlTxt/followDoc.css" rel="stylesheet"></link>
+<script src="/ms/SiteAssets/scripts/followingDoc.js"></script>
+
+<script>
+$( document ).ready(function() {
+    GetFollowingDocuments();
+});
+</script>
+
+<div id="searchMyDocResults">
+	<div class="holder" id="holderMyDoc"></div>
+    <div id="myDocProgress" style="display:none;margin:20px 5px 10px 150px;">
+        <i style="color:rgb(12,99,124);" class="fas fa-cog fa-spin fa-2x"></i>
+    </div>
+	<ul class="containerUl" id="itemContainerMyDoc">
+		
+	</ul>
+</div>
